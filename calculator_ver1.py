@@ -10,6 +10,9 @@ def multiply(x, y):
 def divide(x, y):
     return x / y
 
+def exponent(x, y):
+    return x ** y
+
 def main():
     print("Simple Calculator")
     print("Select operation:")
@@ -17,10 +20,11 @@ def main():
     print("2. Subtract")
     print("3. Multiply")
     print("4. Divide")
+    print("5. Exponent (x^y)")
 
-    choice = input("Enter choice (1/2/3/4): ")
+    choice = input("Enter choice (1/2/3/4/5): ")
 
-    if choice not in ('1', '2', '3', '4'):
+    if choice not in ('1', '2', '3', '4', '5'):
         print("Invalid input.")
         return
 
@@ -39,6 +43,8 @@ def main():
         print(f"Result: {multiply(num1, num2)}")
     elif choice == '4':
         print(f"Result: {divide(num1, num2)}")
+    elif choice == '5':
+        print(f"Result: {exponent(num1, num2)}")
 
 if __name__ == "__main__":
     main()
